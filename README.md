@@ -1,30 +1,48 @@
-# React + TypeScript + Vite
+# Projeto de "Churrascometro"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
 
-Currently, two official plugins are available:
+O projeto tem como objetivo principal a prática de conceitos de lógica de programação e uso de bibliotecas utilitárias, como Formik para validação de dados, e uso de rotas com React Router. No projeto Churrascometro recebemos uma lista de alimentos, onde o usuário fornece o número de pessoas que irão consumir a refeição e recebe como retorno a página resultados informando a quantidade ideal de cada alimento para servir o número de pessoas citado.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+### Calculadora de Alimentos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* Fornece um campo de preenchimento numérico onde o usuário pode fornecer o número de convidados para a refeição.
 
-- Configure the top-level `parserOptions` property like this:
+* Disponibiliza uma lista de alimentos que o usuário pode selecionar para montar o seu cardápio de churrasco.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+* Realiza os calculos baseado em uma quantidade recomendada para cada pessoa e retorna os resultados na página resultados.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Os jogadores devem fazer pares de cartões correspondentes.
+
+### Validação de Dados
+
+* Os dados precisam ser preenchidos corretamente para que a calculadora realize os calculos. Se os dados não forem preenchidos mensagens de erro aparecem para o usuário, instruindo o preenchimento correto dos campos.
+
+### Botão Reiniciar
+
+* Botão que reinicia o orçamento do churrasco.
+
+## Tecnologias Utilizadas:
+
+* Typescript
+* JavaScript
+* HTML
+* CSS
+* ReactJS (para componentização e manipulação do estado)
+* Front-end (foco na interface do usuário)
+
+## Imagens
+
+### Calculadora
+
+![Calculadora de Churrasco]('public/calculatorhome.png')
+
+### Validação de Dados
+
+![Calculadora de Churrasco]('public/homecalculatorvalidation.png')
+
+### Página de Resultado
+
+![Calculadora de Churrasco]('public/resultpage.png')
