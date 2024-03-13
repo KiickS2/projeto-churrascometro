@@ -37,12 +37,12 @@ Os jogadores devem fazer pares de cartões correspondentes.
 
 ### Calculadora
 
-![Calculadora de Churrasco]('public/calculatorhome.png')
+![Calculadora de Churrasco](public/calculatorhome.png)
 
 ### Validação de Dados
 
-![Calculadora de Churrasco]('public/homecalculatorvalidation.png')
+![Validação de Dados](public/homecalculatorvalidation.png)
 
 ### Página de Resultado
 
-![Calculadora de Churrasco]('public/resultpage.png')
+![Resultados](public/resultpage.png)
