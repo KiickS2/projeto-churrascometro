@@ -1,13 +1,17 @@
-import React from 'react'
-import BarbecueCalculator from '../components/BarbecueCalculator'
+import BarbecueCalculator from "../components/BarbecueCalculator";
+
+import bgImage from "../assets/bg-1.jpg";
 
 const Calculator = () => {
   return (
-    <div>
-        <h1>Calculadora de Churrasco</h1>
-        <BarbecueCalculator />
+    <div
+      className="page-container"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <h1>Calculadora de Churrasco</h1>
+      <BarbecueCalculator />
     </div>
-  )
-}
+  );
+};
 
-export default Calculator
+export default Calculator;

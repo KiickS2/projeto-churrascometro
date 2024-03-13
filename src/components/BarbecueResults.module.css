@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    background-color: #FDFDFD;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.resultText {
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+.resetButton {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.calculateButton:hover {
+    background-color: #45A049;
+}

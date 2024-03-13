@@ -6,6 +6,8 @@ import { Formik, Field, Form } from "formik";
 
 import * as Yup from "yup";
 
+import styles from "./BarbecueCalculator.module.css";
+
 const validationSchema = Yup.object().shape({
   people: Yup.number().min(1, "O número de pessoas é obrigatório!"),
   foodSelection: Yup.array()
@@ -21,7 +23,7 @@ const BarbecueCalculator = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className={styles.container}>
       <Formik
         initialValues={{ people: 0, foodSelection: [] }}
         validationSchema={validationSchema}
@@ -30,26 +32,37 @@ const BarbecueCalculator = () => {
             state: {
               people: values.people,
               foodSelection: values.foodSelection,
-            }
+            },
           });
         }}
       >
         {({ errors, touched }) => (
           <Form>
-            <div>
-              <label htmlFor="people">Número de Pessoas:</label>
-              <Field name="people" type="number" />
-              {errors.people && touched.people ? (<p>{errors.people}</p>) : null}
+            <div className={styles.inputGroup}>
+              <label htmlFor="people" className={styles.inputLabel}>
+                Número de Pessoas:
+              </label>
+              <Field name="people" type="number" className={styles.inputField}/>
+              {errors.people && touched.people ? <p className={styles.error}>{errors.people}</p> : null}
             </div>
             <h2>Selecione os alimentos para o churrasco:</h2>
-            {errors.foodSelection && touched.foodSelection ? (<p>{errors.foodSelection}</p>) : null}
             {Object.keys(foodNames).map((food) => (
               <div>
-                <Field type="checkbox" name="foodSelection" value={food} />
+                <Field
+                  type="checkbox"
+                  name="foodSelection"
+                  value={food}
+                  className={styles.checkboxInput}
+                />
                 <label htmlFor="foodSelection">{foodNames[food]}</label>
               </div>
             ))}
-            <button type="submit">Calcular</button>
+            {errors.foodSelection && touched.foodSelection ? (
+              <p className={styles.error}>{errors.foodSelection}</p>
+            ) : null}
+            <button type="submit" className={styles.calculateButton}>
+              Calcular
+            </button>
           </Form>
         )}
       </Formik>
